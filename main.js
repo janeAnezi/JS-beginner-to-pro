@@ -46,3 +46,6 @@ var currentYear,johnYear,markYear;
 console.log("John was born in ", johnYear, " and Mark, john's friend was born in", markYear);
  var isJohnOlder = ageJohn > ageMark;
  console.log(isJohnOlder);
+
+ var isfullAge = currentYear - johnYear >= ageMark;
+ console.log(isfullAge);
