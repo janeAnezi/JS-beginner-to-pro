@@ -52,3 +52,19 @@ console.log("John was born in ", johnYear, " and Mark, john's friend was born in
 
  var average = (ageJohn + ageMark) / 2
  console.log("Their ages added together divided by two is ",average);
+
+ // Multiple assignments
+ var x, y ,z;
+ x= (3 + 3) - (2 * 3);
+ y = 14;
+ z = y * 2 - 8;
+ console.log(x, y, z);
+
+ x += 10;
+ console.log(x);
+ x *= 2;
+ console.log(x);
+ x++;
+ console.log(x);
+ x--;
+ console.log(x);
