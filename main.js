@@ -49,3 +49,6 @@ console.log("John was born in ", johnYear, " and Mark, john's friend was born in
 
  var isfullAge = currentYear - johnYear >= ageMark;
  console.log(isfullAge);
+
+ var average = (ageJohn + ageMark) / 2
+ console.log("Their ages added together divided by two is ",average);
