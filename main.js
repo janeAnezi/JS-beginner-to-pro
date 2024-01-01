@@ -35,36 +35,49 @@ var lastName = prompt('what is his last name?');
 alert(firstName +' '+ lastName);*/
 
 /********* Basic operators */
-var currentYear,johnYear,markYear;
- currentYear = 2023;
- ageJohn = 26;
- ageMark = 24;
+// var currentYear,johnYear,markYear;
+//  currentYear = 2023;
+//  ageJohn = 26;
+//  ageMark = 24;
 
  /** math operator */
- johnYear = currentYear - ageJohn;
- markYear = currentYear - ageMark;
-console.log("John was born in ", johnYear, " and Mark, john's friend was born in", markYear);
- var isJohnOlder = ageJohn > ageMark;
- console.log(isJohnOlder);
+//  johnYear = currentYear - ageJohn;
+//  markYear = currentYear - ageMark;
+// console.log("John was born in ", johnYear, " and Mark, john's friend was born in", markYear);
+//  var isJohnOlder = ageJohn > ageMark;
+//  console.log(isJohnOlder);
 
- var isfullAge = currentYear - johnYear >= ageMark;
- console.log(isfullAge);
+//  var isfullAge = currentYear - johnYear >= ageMark;
+//  console.log(isfullAge);
 
- var average = (ageJohn + ageMark) / 2
- console.log("Their ages added together divided by two is ",average);
+//  var average = (ageJohn + ageMark) / 2
+//  console.log("Their ages added together divided by two is ",average);
 
  // Multiple assignments
- var x, y ,z;
- x= (3 + 3) - (2 * 3);
- y = 14;
- z = y * 2 - 8;
- console.log(x, y, z);
+//  var x, y ,z;
+//  x= (3 + 3) - (2 * 3);
+//  y = 14;
+//  z = y * 2 - 8;
+//  console.log(x, y, z);
 
- x += 10;
- console.log(x);
- x *= 2;
- console.log(x);
- x++;
- console.log(x);
- x--;
- console.log(x);
+//  x += 10;
+//  console.log(x);
+//  x *= 2;
+//  console.log(x);
+//  x++;
+//  console.log(x);
+//  x--;
+//  console.log(x);
+
+/****  codding challenge 1 ******/
+var markHeight, johnHeight, markBMIs,JohnBMIs, massMark, massJohn;
+ massMark = 20;
+ massJohn = 45
+ markHeight = 15;
+ johnHeight = 18;
+
+markBMIs = massMark / (markHeight * markHeight);
+JohnBMIs = massJohn / (johnHeight * johnHeight);
+console.log(markBMIs, JohnBMIs);
+var isMarkBMIsHigher = markBMIs > JohnBMIs;
+console.log("Is Mark BMI higher than John's?, ", isMarkBMIsHigher);
