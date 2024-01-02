@@ -99,7 +99,7 @@ if (civilStatus === 'single' ) {
     console.log(firstName, ' is hopping to get married soon');
 }
 
-var isMarried = true;
+var isMarried = falseS;
 if(isMarried) {
     console.log(firstName, ' is hopping to get married soon');
 } else {
