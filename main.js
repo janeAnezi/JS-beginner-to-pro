@@ -78,6 +78,32 @@ var markHeight, johnHeight, markBMIs,JohnBMIs, massMark, massJohn;
 
 markBMIs = massMark / (markHeight * markHeight);
 JohnBMIs = massJohn / (johnHeight * johnHeight);
-console.log(markBMIs, JohnBMIs);
+if (markBMIs > JohnBMIs) {
+    console.log(markBMIs, JohnBMIs);
+    console.log('mark\'s BMIs is higher than john\'s BMIs');
+}else {
+    console.log('john\'s BMIs is higher or equal to mark\'s BMIs');
+    console.log(markBMIs, JohnBMIs);
+}
+
 var isMarkBMIsHigher = markBMIs > JohnBMIs;
 console.log("Is Mark BMI higher than John's?, ", isMarkBMIsHigher);
+
+/**** If/ else statement */
+var firstName = "jane";
+var civilStatus = "single";
+
+if (civilStatus === 'single' ) {
+    console.log(firstName,' is', civilStatus);
+}else {
+    console.log(firstName, ' is hopping to get married soon');
+}
+
+var isMarried = true;
+if(isMarried) {
+    console.log(firstName, ' is hopping to get married soon');
+} else {
+    console.log(firstName,' is', civilStatus);
+}
+
+/**** Boolean logic */
