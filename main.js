@@ -212,6 +212,7 @@ var ahnnieAge = calculateAge(1998);
 var sammyAge = calculateAge(1999);
 console.log(ahnnieAge, sammyAge);
 
+// function decleration
 function yearsUntillRetirement(name, year) {
     var age = calculateAge(year);
     var retirementYear = 65 - age;
@@ -225,4 +226,56 @@ yearsUntillRetirement("sameer", 1992);
 yearsUntillRetirement("ebune", 1940);
 yearsUntillRetirement("alpha", 1995);
 
-/***** function statement and expressions */
+/***** function expressions */
+var whatDoYouDo = function(firstName, job) {
+    switch (job) {
+        case 'teacher':
+            return firstName,' teaches kids how to code';
+        case 'driver':
+            return firstName,' drives a cab in awka';
+        case 'designer':
+            return firstName,' designs beautiful websites';
+        default:
+            return firstName, ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('john', 'driver'));
+console.log(whatDoYouDo('mark', 'teacher'));
+console.log(whatDoYouDo('mary', 'cook'));
+
+// about function statement/decleration and function expression
+//function statement or decleration does not produce immediate result while 
+//function expression produces immediate result because it gets executed immediately
+
+/****** Arrays *******/
+
+//initialize new array
+var arr = [1, 3, 7];
+var names = ['Amina', 'Sara', 'mufasa'];
+var weekDays = ['sun','mon', 'tue', 'wed', 'thur', 'fri', 'sat'];
+
+console.log(names, names[2]);
+console.log(weekDays, weekDays.length);
+
+// mutate array data
+arr[1] = 8;
+names[5] = 'cindy';
+weekDays[weekDays.length] = 'noDay';
+console.log(weekDays);
+console.log(names);
+console.log(arr);
+
+// Different data types
+var jane = ['jane', 'Doe', '1999', true, 'Developer'];
+
+// array methods/functions
+jane.push('white'); // adds to the end of the array
+jane.unshift('Miss'); //adds at beginning of array;
+console.log(jane); 
+jane.pop(); // removes from the end of array;
+console.log(jane);
+jane.shift(); // removes from the begining of array;
+console.log(jane);
+
+console.log(jane.indexOf(true));
