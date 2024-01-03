@@ -152,3 +152,53 @@ switch(true) {
     default:
     console.log('you can vote and are an adult!');        
 }
+
+/****** Truthy and Falsy values and equality operators */
+// In JavaScript there are several “falsy” or “falsey” values that evaluate as
+// false when treated like a boolean in a conditional expression (if, while, etc.). These include
+// undefined, null, 0, "", false and NaN. Everything else is considered “truth
+// y”. When comparing two values using the == operator, if one of them is falsy
+// the other value will be converted to a boolean first before making the comparison.
+
+var height;
+//height = 11;
+//height = 0;
+height = '';
+if(height || height === 0) {
+    console.log('this variable is defined');
+}else {
+    console.log('This variable is Not defined');
+}
+
+// javascript does type coersion, which means it coverts string to a number and compares the number if they are the same.
+
+/**** coding challenge 2 ***/
+
+totalScoreTeamJohn = 100 + 120 + 113;
+totalScoreTeamMike = 100 + 120 + 113;
+totalScoreTeamMarry = 100 + 120 + 113;
+averageTeamJohn = totalScoreTeamJohn / 3;
+averageTeamMike = totalScoreTeamMike / 3;
+averageTeamMarry = totalScoreTeamMarry / 3;
+// if (averageTeamJohn > averageTeamMike) {
+//     console.log("Winner!!!. The team with the highest score is John's team");
+//     console.log("Team John: ", averageTeamJohn, " and Team Mike: ", averageTeamMike);
+// }else if (averageTeamJohn === averageTeamMike) {
+//     console.log("It's a draw!!!, Both teams have the same score.");
+// }else {
+//     console.log("The winner is Mike's team!");
+//     console.log("Team Mike: ", averageTeamMike, " and Team John: ", averageTeamJohn);
+// }
+switch(true) {
+    case averageTeamJohn > averageTeamMike && averageTeamJohn > averageTeamMarry:
+        console.log("Winner!!!. The team with the highest score is John's team");
+        break;
+    case averageTeamMike > averageTeamJohn && averageTeamMike > averageTeamMarry:
+        console.log("Winner!!!. The team with the highest score is Mike's team");
+        break;
+    case averageTeamMarry > averageTeamJohn && averageTeamMarry > averageTeamMike:
+        console.log("Winner!!!. The team with the highest score is Marry's team");
+        break;
+    default:
+        console.log("Its a Draw!!!!, We have no winner Yet.");
+}
