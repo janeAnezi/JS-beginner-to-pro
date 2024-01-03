@@ -202,3 +202,27 @@ switch(true) {
     default:
         console.log("Its a Draw!!!!, We have no winner Yet.");
 }
+
+/****** Functions ****/
+function calculateAge(yearOfBirth) {
+    return 2024 - yearOfBirth;
+}
+
+var ahnnieAge = calculateAge(1998);
+var sammyAge = calculateAge(1999);
+console.log(ahnnieAge, sammyAge);
+
+function yearsUntillRetirement(name, year) {
+    var age = calculateAge(year);
+    var retirementYear = 65 - age;
+    if(retirementYear > 0) {
+        console.log(name + ' will turn ' + age + ', so he has ' + retirementYear, ' more years to retire.');
+    } else {
+        console.log(name, ' is already retired.');
+    }
+}
+yearsUntillRetirement("sameer", 1992);
+yearsUntillRetirement("ebune", 1940);
+yearsUntillRetirement("alpha", 1995);
+
+/***** function statement and expressions */
