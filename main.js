@@ -99,7 +99,7 @@ if (civilStatus === 'single' ) {
     console.log(firstName, ' is hopping to get married soon');
 }
 
-var isMarried = falseS;
+var isMarried = false;
 if(isMarried) {
     console.log(firstName, ' is hopping to get married soon');
 } else {
@@ -107,3 +107,11 @@ if(isMarried) {
 }
 
 /**** Boolean logic */
+var age = 18;
+if(age < 18) {
+    console.log('you are not old enough to vote');
+}else if (age >= 18 && age <= 20) {
+    console.log('you can vote but you are still a teenager');
+}else {
+    console.log('you can vote and are an adult!');
+}
