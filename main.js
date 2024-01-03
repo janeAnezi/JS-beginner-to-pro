@@ -267,7 +267,7 @@ console.log(names);
 console.log(arr);
 
 // Different data types
-var jane = ['jane', 'Doe', '1999', true, 'Developer'];
+var jane = ['jane', 'Doe', '1999', true, 'happy', 'Developer'];
 
 // array methods/functions
 jane.push('white'); // adds to the end of the array
@@ -279,3 +279,33 @@ jane.shift(); // removes from the begining of array;
 console.log(jane);
 
 console.log(jane.indexOf(true));
+var janeMood = jane.indexOf('happy') === -1 ? 'she is a jolly little fellow' : 'she just dey';
+console.log(janeMood);
+
+/**** coding challenge 3 ****/
+function tipCalculator(amount) {
+    var percentage;
+    if(amount < 50) {
+         percentage = .2;
+    }else if (amount >= 50 && amount <= 200) {
+        percentage = .15;
+    }else {
+        percentage = .1;
+    }
+
+    return percentage * amount;
+}
+var bills = [124, 48, 268];
+var tips = [
+    tipCalculator(bills[0]),
+    tipCalculator(bills[1]),
+    tipCalculator(bills[2]),
+]
+console.log(tips)
+
+var totalAmount = [
+    tipCalculator(bills[0]) + bills[0],
+    tipCalculator(bills[1] + bills[1]),
+    tipCalculator(bills[2]) + bills[2],
+]
+console.log(totalAmount);
