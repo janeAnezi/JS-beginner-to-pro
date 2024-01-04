@@ -283,29 +283,6 @@ var janeMood = jane.indexOf('happy') === -1 ? 'she is a jolly little fellow' : '
 console.log(janeMood);
 
 /**** coding challenge 3 ****/
-function tipCalculator(amount) {
-    var percentage;
-    if(amount < 50) {
-         percentage = .2;
-    }else if (amount >= 50 && amount <= 200) {
-        percentage = .15;
-    }else {
-        percentage = .1;
-    }
+var bills = [124, 48, 268]
 
-    return percentage * amount;
-}
-var bills = [124, 48, 268];
-var tips = [
-    tipCalculator(bills[0]),
-    tipCalculator(bills[1]),
-    tipCalculator(bills[2]),
-]
-console.log(tips)
 
-var totalAmount = [
-    tipCalculator(bills[0]) + bills[0],
-    tipCalculator(bills[1] + bills[1]),
-    tipCalculator(bills[2]) + bills[2],
-]
-console.log(totalAmount);
