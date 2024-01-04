@@ -294,3 +294,7 @@ function tipCalculator(bill) {
         return bill * .1;
     }
 }
+tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+totalBills = [tipCalculator(bills[0]) + bills[0], tipCalculator(bills[1]) + bills[1], tipCalculator(bills[2]) + bills[2]];
+console.log('Tip Array: ', tips);
+console.log('Final paid amount: ', totalBills);
