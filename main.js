@@ -307,6 +307,6 @@ var julet = {
     hobbies: ['reading', 'hiking', 'cooking', 'seeing movies'],
     isMarried: false
 }
-
-console.log(john.age);
+fun = 'hobbies',
+console.log( john['lastName'], john.age, john['fun']);
 
