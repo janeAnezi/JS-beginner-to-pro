@@ -299,4 +299,14 @@ totalBills = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 console.log('Tip Array: ', tips ,' & Final paid amount: ', totalBills);
 
 
-/**** ***/
+/****Objects and properties ***/
+var julet = {
+    firstName: 'julet',
+    lastName: 'okonkwo',
+    age: 32,
+    hobbies: ['reading', 'hiking', 'cooking', 'seeing movies'],
+    isMarried: false
+}
+
+console.log(john.age);
+
