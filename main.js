@@ -308,5 +308,5 @@ var julet = {
     isMarried: false
 }
 fun = 'hobbies',
-console.log( john['lastName'], john.age, john['fun']);
+console.log( julet['lastName'], julet.age, julet['fun']);
 
