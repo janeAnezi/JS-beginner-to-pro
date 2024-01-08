@@ -310,3 +310,4 @@ var julet = {
 fun = 'hobbies',
 console.log( julet['lastName'], julet.age, julet[fun]);
 
+console.log(julet.lastName= 'okeke');
