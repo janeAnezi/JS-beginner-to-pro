@@ -350,4 +350,40 @@ ob.greeting = function() {console.log('hi');}
 const oblit = {}
 oblit.name = "Jane"
 oblit.age = 30
+oblit['city'] = "New York"
+const key = 'town'
+oblit[key] = "Los Angeles" 
+
+// another way of declaring objects is writing the objects inline.
+const objs = {
+    name: "Jack",
+    age: 40,
+    town: "Chicago",
+    greeting: function(){console.log("Hello")},
+    hasCar : false,
+    hobbies : ["Reading","Writing"],
+    address : {
+        street:"123 Main St.",
+        city : "San Francisco",
+    }
+}
+console.log(ob, oblit, objs);
+
+// object mutation
+ob.age = 35;
+console.log(ob);
+
+const o1 = {
+    a: 'a',
+    b: 'b',
+    d: {
+        key: 'key',
+    }
+}
+const o2 = o1;
+o1.d.key = 'enter';
+o2.c='c'; 
+o1.a= 'new value'
+
+console.log(o2);
 
