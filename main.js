@@ -171,6 +171,14 @@ if(height || height === 0) {
 }
 
 // javascript does type coersion, which means it coverts string to a number and compares the number if they are the same.
+// changing one type to a different type
+
+// Explicit vs Implicit coercion
+const x = 42;
+const explicit = String(x);  // explicit === '42'
+const implicit = x + '';    // implicit === '42'
+
+// == vs === , == coerces types, while === requires the exact type. 
 
 /**** coding challenge 2 ***/
 
@@ -313,3 +321,19 @@ console.log( julet['lastName'], julet.age, julet[fun]);
 console.log(julet.lastName= 'okeke');
 console.log(fun = 'age');
 console.log(julet.isMarried);
+
+const arrTest = [
+    'jane',
+    11,
+    function() {console.log('hi');}
+]
+
+// to execute the function in the arrTest array
+arrTest[2] ()
+
+for (let i = 0; i < arrTest.length; i++) {
+    console.log(`Value at ${i}: ${arrTest[i]}`)
+}
+
+// primitives vs Objects, primitives are immutable(unchanging or unable to be changed)
+// objects are mutable and stored by reference
