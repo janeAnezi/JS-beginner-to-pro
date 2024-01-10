@@ -337,3 +337,17 @@ for (let i = 0; i < arrTest.length; i++) {
 
 // primitives vs Objects, primitives are immutable(unchanging or unable to be changed)
 // objects are mutable and stored by reference
+
+// creating objects
+const ob = new Object();
+ob.firstName = "John";
+ob.lastName = "Doe";
+ob.age = 25;
+ob.isLearning = true;
+ob.greeting = function() {console.log('hi');}
+
+//another way of creating object by object literal
+const oblit = {}
+oblit.name = "Jane"
+oblit.age = 30
+
