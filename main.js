@@ -427,3 +427,43 @@ nonye.calAge()
 console.log(nonye);
 nonye.family.push('amara');
 console.log(nonye.family);
+
+// coding challenge 4
+
+let markBmi = {
+    fullName: 'Mark Smith',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        let heightSqr = this.height * this.height;
+        this.bmi = this.mass / heightSqr;
+        return this.bmi;
+    }
+};
+let johnBmi = {
+    fullName: 'John Doe',
+    mass: 92, 
+    height: 1.95,
+    calcBMI: function() {
+        let heightSqr = this.height * this.height;
+        this.bmi = this.mass / heightSqr;
+        return this.bmi;
+    }
+};
+
+markBmi.calcBMI();
+johnBmi.calcBMI();
+console.log(markBmi);
+console.log(johnBmi);
+function higherBMI() {
+    if(johnBmi.bmi > markBmi.bmi) {
+        console.log(`${johnBmi.fullName} has the highest BMI by, ${johnBmi.bmi}`);
+    }else if(markBmi.bmi > johnBmi.bmi) {
+        console.log(`${markBmi.fullName} has the highest BMI by ${markBmi.bmi}`);
+    }else {
+        console.log('We have equal BMIs');
+    }
+}
+
+higherBMI();
+
