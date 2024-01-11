@@ -442,7 +442,7 @@ let markBmi = {
 };
 let johnBmi = {
     fullName: 'John Doe',
-    mass: 92, 
+    mass: 110, 
     height: 1.95,
     calcBMI: function() {
         let heightSqr = this.height * this.height;
@@ -451,12 +451,12 @@ let johnBmi = {
     }
 };
 
-markBmi.calcBMI();
-johnBmi.calcBMI();
+//console.log(markBmi.calcBMI()); this returns the bmi of mark
+//johnBmi.calcBMI();
 console.log(markBmi);
 console.log(johnBmi);
 function higherBMI() {
-    if(johnBmi.bmi > markBmi.bmi) {
+    if(johnBmi.calcBMI() > markBmi.calcBMI()) {
         console.log(`${johnBmi.fullName} has the highest BMI by, ${johnBmi.bmi}`);
     }else if(markBmi.bmi > johnBmi.bmi) {
         console.log(`${markBmi.fullName} has the highest BMI by ${markBmi.bmi}`);
