@@ -300,8 +300,25 @@ function tipCalculator(bill) {
         return bill * .15;
     }else {
         return bill * .1;
-    }
+    } 
 }
+// or it could be written as
+
+function tipCal(bill) {
+    let percentage;
+    if(bill < 50) {
+        percentage = .2;
+    } else if(bill >= 50 && bill <= 200) {
+        percentage = .15;
+    }else {
+        percentage = .1;
+    }
+    return bill * percentage;
+}
+console.log(`The amount of tip given  is ${tipCal(20)}`);
+let tipArr = [];
+tipArr.push(tipCal(bills[0]), tipCal(bills[1]), tipCal(bills[2]))
+console.log(tipArr);
 tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
 totalBills = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 console.log('Tip Array: ', tips ,' & Final paid amount: ', totalBills);
@@ -380,10 +397,14 @@ const o1 = {
         key: 'key',
     }
 }
-const o2 = o1;
+const o2 = Object.assign({}, o1) //creates new object with same
+// properties as o1 but not linked to it
+
+//const o2 = o1; // but this is linked together
 o1.d.key = 'enter';
 o2.c='c'; 
 o1.a= 'new value'
 
 console.log(o2);
+
 
