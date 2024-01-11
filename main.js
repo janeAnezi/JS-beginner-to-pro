@@ -356,7 +356,7 @@ for (let i = 0; i < arrTest.length; i++) {
 // objects are mutable and stored by reference
 
 // creating objects
-const ob = new Object();
+const ob = new Object(); // new object synthax
 ob.firstName = "John";
 ob.lastName = "Doe";
 ob.age = 25;
@@ -407,4 +407,23 @@ o1.a= 'new value'
 
 console.log(o2);
 
+// objects and methods
 
+var nonye = {
+    firstName: 'nonye',
+    lastName: 'eminent',
+    birthYear: 1999,
+    family: ['dimma', 'ada', 'ebuka'],
+    job: 'engineer',
+    isMarried: true,
+    calAge: function() {
+        let currentYear = 2024;
+        this.age = currentYear - this.birthYear;
+    }
+}
+
+//nonye.age = nonye.calAge(); 
+nonye.calAge()
+console.log(nonye);
+nonye.family.push('amara');
+console.log(nonye.family);
