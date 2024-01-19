@@ -483,4 +483,46 @@ while(i < weekDays.length) {
 }
 
 // continue and break ststement
+let sara = ['Tall', 23, 'Smart', 'Dark', true]
+for(let i = 0; i< sara.length; i++) {
+    if(typeof sara[i] !== 'string') continue; // meaning, if there is a value in the sara array that is not a string, it should be skipped or ignored.
+    console.log(sara[i]);
+}
 
+for(let i = 0; i< sara.length; i++) {
+    if(typeof sara[i] !== 'string') break; // meaning, when it encounters a value that it not a string, it breaks out of the loop and stops running.
+    console.log(sara[i]);
+}
+
+// to loop backwards
+for(let i = weekDays.length-1; i >= 0; i--) {
+    console.log(weekDays[i]);
+}
+
+/**** coding challenge 5 ***/
+let johnObj = {
+    name: "John",
+    newJohnBill: [124, 48, 268, 180, 42],
+    calcTip: function CalcTip() {
+            this.tips = [];
+            this.totalBills =[];
+            
+            for(let i = 0; i < this.newJohnBill.length; i++) {
+               let percentage;
+               let bill = this.newJohnBill[i];
+                if(bill < 50) {
+                    percentage = .2;
+                } else if(bill >= 50 && bill <= 200) {
+                    percentage = .15;
+                } else {
+                    percentage = .1;
+                }
+                this.tips[i] = bill * percentage;
+                this.totalBills[i] = bill + tips[i];  
+            } 
+        }
+}
+
+johnObj.calcTip();
+console.log("The tip is : ", johnObj.tips);
+console.log("The total bill with the tip is : ", johnObj.totalBills)
