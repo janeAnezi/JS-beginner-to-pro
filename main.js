@@ -464,8 +464,8 @@ if(johnBmi.calcBMI() > markBmi.calcBMI()) {
 }
 
 /**** Loops and Iteration ****/ 
-//for loop
 
+//for loop
 for(let i=0; i<=10; i++){ //to get values from 0 to 10
     console.log(i); // to log the values of 0 to 10
 }
@@ -474,3 +474,13 @@ var weekDays = ['sun','mon', 'tue', 'wed', 'thur', 'fri', 'sat'];
 for( let i=0; i< weekDays.length; i++) {
     console.log(`position ${i} is ${weekDays[i]}`);
 }
+
+// while loop
+var i = 0;
+while(i < weekDays.length) {
+    console.log(weekDays[i]);
+    i++
+}
+
+// continue and break ststement
+
