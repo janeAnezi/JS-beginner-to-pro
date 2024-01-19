@@ -518,11 +518,12 @@ let johnObj = {
                     percentage = .1;
                 }
                 this.tips[i] = bill * percentage;
-                this.totalBills[i] = bill + tips[i];  
+                this.totalBills[i] = bill + this.tips[i];  
             } 
         }
 }
 
 johnObj.calcTip();
-console.log("The tip is : ", johnObj.tips);
-console.log("The total bill with the tip is : ", johnObj.totalBills)
+console.log(johnObj);
+//console.log("The tip is : ", johnObj.tips);
+//console.log("The total bill with the tip is : ", johnObj.totalBills)
