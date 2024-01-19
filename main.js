@@ -455,15 +455,22 @@ let johnBmi = {
 //johnBmi.calcBMI();
 console.log(markBmi);
 console.log(johnBmi);
-function higherBMI() {
-    if(johnBmi.calcBMI() > markBmi.calcBMI()) {
-        console.log(`${johnBmi.fullName} has the highest BMI by, ${johnBmi.bmi}`);
-    }else if(markBmi.bmi > johnBmi.bmi) {
-        console.log(`${markBmi.fullName} has the highest BMI by ${markBmi.bmi}`);
-    }else {
-        console.log('We have equal BMIs');
-    }
+if(johnBmi.calcBMI() > markBmi.calcBMI()) {
+    console.log(`${johnBmi.fullName} has the highest BMI by, ${johnBmi.bmi}`);
+}else if(markBmi.bmi > johnBmi.bmi) {
+    console.log(`${markBmi.fullName} has the highest BMI by ${markBmi.bmi}`);
+}else {
+    console.log('We have equal BMIs');
 }
 
-higherBMI();
+/**** Loops and Iteration ****/ 
+//for loop
 
+for(let i=0; i<=10; i++){ //to get values from 0 to 10
+    console.log(i); // to log the values of 0 to 10
+}
+
+var weekDays = ['sun','mon', 'tue', 'wed', 'thur', 'fri', 'sat'];
+for( let i=0; i< weekDays.length; i++) {
+    console.log(`position ${i} is ${weekDays[i]}`);
+}
