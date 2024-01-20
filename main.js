@@ -527,3 +527,29 @@ johnObj.calcTip();
 console.log(johnObj);
 //console.log("The tip is : ", johnObj.tips);
 //console.log("The total bill with the tip is : ", johnObj.totalBills)
+
+let markObj = { //create an object with an array for the bill values
+    name: 'Mark Millian',
+    bills: [77, 375, 110, 45],
+    calcTip: function MarkTip() { // add a method to calculate the tip
+        this.tips = []; // to create a new array containing all tip and also as part of the object property
+        this.finalPaidAmmounts = []; // to create a new array containing total amount paid and also as part of the object property
+        for (var i=0; i<this.bills.length; i++) { // a loop to iterate over all the paid bills and do the tip calculations
+            let bill = this.bills[i];
+            let percentage;
+            if(bill < 100) {
+                percentage = .2;
+            } else if (bill >= 100 && bill <= 300) {
+                percentage = .1;
+            } else {
+                percentage = .25
+            }
+
+            this.tips[i] = bill * percentage;
+            this.finalPaidAmmounts[i] = bill + this.tips[i]
+        }
+    }
+}
+
+markObj.calcTip();
+console.log(markObj);
