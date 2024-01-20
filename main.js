@@ -523,14 +523,13 @@ let johnObj = {
         }
 }
 
-johnObj.calcTip();
-console.log(johnObj);
+
 //console.log("The tip is : ", johnObj.tips);
 //console.log("The total bill with the tip is : ", johnObj.totalBills)
 
 let markObj = { //create an object with an array for the bill values
-    name: 'Mark Millian',
-    bills: [77, 375, 110, 45],
+    name: 'Mark Miller',
+    bills: [77, 475, 110, 45],
     calcTip: function MarkTip() { // add a method to calculate the tip
         this.tips = []; // to create a new array containing all tip and also as part of the object property
         this.finalPaidAmmounts = []; // to create a new array containing total amount paid and also as part of the object property
@@ -551,5 +550,21 @@ let markObj = { //create an object with an array for the bill values
     }
 }
 
+
+
+function CalcAverageTip(arr) {
+    let sumOfTips = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sumOfTips += arr[i] ;
+    }
+   return sumOfTips / arr.length;
+  
+}
+johnObj.calcTip();
 markObj.calcTip();
-console.log(markObj);
+johnObj.averageTip = CalcAverageTip(johnObj.tips);
+markObj.averageTip = CalcAverageTip(markObj.tips);
+
+console.log(johnObj, markObj);
+
+console.log((johnObj.averageTip) > (markObj.averageTip) ? johnObj.name +  "\'s family pays the highest tips, with an average of $" + johnObj.averageTip : markObj.name + "\'s family pays the highest tips, with an average of $" + markObj.averageTip);
