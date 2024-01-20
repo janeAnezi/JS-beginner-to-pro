@@ -568,3 +568,16 @@ markObj.averageTip = CalcAverageTip(markObj.tips);
 console.log(johnObj, markObj);
 
 console.log((johnObj.averageTip) > (markObj.averageTip) ? johnObj.name +  "\'s family pays the highest tips, with an average of $" + johnObj.averageTip : markObj.name + "\'s family pays the highest tips, with an average of $" + markObj.averageTip);
+
+// the object below display the statement that the 'this' key word is not assigned any value until the method of the object is called. and also the 'this key word in a regular function referes to the window object.
+let grace = {
+    name: 'Grace',
+    age: 36,
+    calcYear: function() {
+        this.yearOfBirth = (2024 - this.age);
+    }
+}
+grace.calcYear();
+console.log(grace);
+
+/**** DOM Manipulations and Events ****/
