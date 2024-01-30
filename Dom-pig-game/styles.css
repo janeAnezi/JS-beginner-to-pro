@@ -125,10 +125,63 @@ i {
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
-.dice-1 { left: 45%; top: 178px;}
+.dice-1 { 
+    width: 100px;
+    left: 45%; 
+    top: 178px
+}
 .dice-2 {  left: 60%; top: 178px;}
 
 .winner { background: color #f7f7f7;}
 .winner .player-name { font-weight: 300; color: #eb4d4d;}
 
 .winning-score:focus { outline: none;}
+
+@media (min-width: 368px) { 
+    .wrapper {
+        width: 600px;
+        height: 400px;
+        top: 15%;
+        left: 8%;
+    }
+    .player-0-panel, .player-1-panel {
+        height: 400px;
+        padding: 4px;
+    }
+    .player-name {
+        font-size: 35px;
+        letter-spacing: 1px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+      
+    }
+    .player-score {
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 90px;
+    }
+    .player-current-box {
+        width: 30%;
+    }
+    .player-current-label {
+        margin-bottom: 0px;
+    }
+    i {
+        margin-right: 8px;
+        font-size: 25px;
+    }
+    
+    .btn-roll { top: 290px;}
+    .btn-hold { top: 347px;}
+
+    .dice-1 { 
+        top: 148px;
+        width: 80px;
+        height: 80px;
+    }
+    .dice-2 {  
+        top: 148px;
+        width: 80px;
+        height: 80px;
+    }
+}
