@@ -580,4 +580,5 @@ let grace = {
 grace.calcYear();
 console.log(grace);
 
-/**** DOM Manipulations and Events ****/
+/**** Creating Objects: Function construstors ****/
+

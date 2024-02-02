@@ -137,19 +137,20 @@ i {
 
 .winning-score:focus { outline: none;}
 
-@media (min-width: 368px) { 
+@media screen and (max-width: 600px) { 
     .wrapper {
-        width: 600px;
+        width: 500px;
         height: 400px;
-        top: 15%;
-        left: 8%;
+        top: 5%;
+        left: 5%;
     }
     .player-0-panel, .player-1-panel {
         height: 400px;
-        padding: 4px;
+        width: 233px;
+        padding: 0;
     }
     .player-name {
-        font-size: 35px;
+        font-size: 30px;
         letter-spacing: 1px;
         margin-top: 50px;
         margin-bottom: 0px;
@@ -183,5 +184,9 @@ i {
         top: 148px;
         width: 80px;
         height: 80px;
+    }
+    .game-rule {
+        position: absolute;
+        bottom: 0;
     }
 }
