@@ -95,7 +95,7 @@ var obj = {
 
 /******** first class functions: passing functions as an argument ******/
 
-let years = [1994, 1997, 1995, 1998, 1999];
+let years = [1994, 2010, 1995, 1998, 1999];
  function yearCalc(arr, func) {
     let ageArr = [];
     for(let i=0; i<arr.length; i++) {
@@ -107,5 +107,24 @@ let years = [1994, 1997, 1995, 1998, 1999];
     return(2024 - year);
  }
 
+ function isFullAge(age) {
+    return age >= 18;
+ }
+
+ // to calculate person heart rate base on the person's age
+ function maxHeartRate(age) {
+    if(age >= 18 && age <= 81) {
+        return Math.round(206.9 - (0.67 * age));
+    } else {
+        return -1;
+    }
+ }
+
  let ages = yearCalc(years, calculateAge);
+ let fullAges = yearCalc(ages, isFullAge);
+ let heartRates = yearCalc(ages, maxHeartRate);
  console.log(ages);
+ console.log(fullAges);
+ console.log(heartRates);
+
+// first class functions: returning functions
