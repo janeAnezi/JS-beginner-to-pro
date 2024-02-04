@@ -128,3 +128,24 @@ let years = [1994, 2010, 1995, 1998, 1999];
  console.log(heartRates);
 
 // first class functions: returning functions
+// functions are always first class functions in javascript because they are effectively objects
+
+function interviewQuestions(job) {
+    if(job ===  'designer') {
+        return function(name) {
+            console.log('what is UX design, ' + name);
+        };              
+    }else if (job === 'teacher') {
+        return function(name) {
+            console.log('what do you teach? ' + name);
+        }
+    }else {
+        return function(name) {
+            console.log('what do you do? ' + name)
+        }
+    }
+}
+
+let teacherQuestion = interviewQuestions('teacher');
+teacherQuestion('john');
+
