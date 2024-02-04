@@ -248,3 +248,28 @@ let emillyFriendly = jerry.presentation.bind(emilly, 'formal');
 emillyFriendly('morning');
 emillyFriendly('afternoon');
 
+let yearS = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, func) {
+    let arrResult = [];
+    for(let i=0; i< arr.length; i++) {
+        arrResult.push(func(arr[i]));
+    }
+    return arrResult;
+}
+function calculateAge(year){
+    return 2024 - year;
+}
+function isFullAge(limit, age) {
+    return  age >= limit;
+}
+
+let agesArr = arrayCalc(yearS, calculateAge);
+console.log(agesArr);
+
+let fullAgeJapan = arrayCalc(agesArr, isFullAge.bind(this, 20));
+let fullAgeNiger = arrayCalc(agesArr, isFullAge.bind(this, 30));
+console.log(fullAgeJapan);
+console.log(fullAgeNiger);
+
+/********* Coding challenge *****/
