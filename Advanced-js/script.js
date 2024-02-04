@@ -178,4 +178,35 @@ ageGradder(2)('mercy');
     console.log(score >= 5);
 })();
 // the function is wrapped in parenthesis to trick the parser to think it is a function expression instead of function decleration/statement.
-// private variable in JavaScript, creating data privacy
+//    creating data privacy
+
+/******* closures *****/
+ function retirement(retirementAge) {
+    return function(yearOfBirth) {
+      let age = 2024 - yearOfBirth;
+      console.log(retirementAge - age + ' years left before retirement'); 
+    }
+ }
+ retirement(65)(1994);
+// so to summerise how a closure works,  when we call the outer function, it returns an inner function
+//   and any variables that were declared in the scope of the outer 
+//      function become accessible from inside the inner function even after the outer function has been called. 
+// or simply:
+// An inner function always has access to the variables and parameters of its outer
+//      function, even after the outer function has returned/executed 
+
+function interviewQuestions(job) {
+    return function(name) {
+        if(job ===  'designer') {
+            console.log('what is UX design, ' + name);
+        } else if (job === 'teacher') {
+            console.log('what do you teach? ' + name);
+        } else {
+            console.log('what do you do? ' + name)
+        }
+    }
+}
+
+interviewQuestions('banker')('kc');
+
+/******* Bind, Call and Apply ******/
