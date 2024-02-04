@@ -147,5 +147,35 @@ function interviewQuestions(job) {
 }
 
 let teacherQuestion = interviewQuestions('teacher');
+let designerQuestion = interviewQuestions('designer');
 teacherQuestion('john');
+designerQuestion('james');
+// it can also be written as 
+interviewQuestions('teacher')('Anezi');
 
+function ageGradder(age) {
+    if( age < 5) {
+        return function(name) {
+            console.log(name + " is a young one!");
+        }
+    } else if(age >=  5 && age <=13 ) {
+        return function(name){
+           console.log(name + " is a child");
+        }
+    } else {
+        return function(name) {
+            console.log('How old are you, ' + name);
+        }
+    }
+}
+
+ageGradder(2)('mercy');
+
+// immediately invoked function expression (IIFE)
+
+(function() {
+    let score = Math.random() * 10;
+    console.log(score >= 5);
+})();
+// the function is wrapped in parenthesis to trick the parser to think it is a function expression instead of function decleration/statement.
+// private variable in JavaScript, creating data privacy
