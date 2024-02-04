@@ -210,3 +210,41 @@ function interviewQuestions(job) {
 interviewQuestions('banker')('kc');
 
 /******* Bind, Call and Apply ******/
+let jerry = {
+    name: 'Jerry',
+    age: 28,
+    job: 'Designer',
+    presentation: function(style, timeOfDay) {
+        if(style ===  'formal') {
+            console.log(`Good ${timeOfDay} ladies and gentlemen, My name is ${this.name}, I am a ${this.age} years old ${this.job}`);
+        }else if (style === 'casual'){
+            console.log(`Good ${timeOfDay} everyone, I am ${this.name} and  I'm a ${this.job}`);
+        } else {
+            console.log(`Hello everyone`);
+        }
+    }
+}
+jerry.presentation('formal','morning'); // Good morning ladies and gentlemen,  I am Jerry and I’m a Designer
+let emilly = {
+    name: 'Emily',
+    age: 29,
+    job: 'singer'
+}
+// Call
+jerry.presentation.call(emilly, 'casual', 'afternoon'); // this is what is called  a call method or method borrowing
+
+// Apply
+jerry.presentation.apply(emilly,['casual','evening']); // the apply method recieves the argument as an array, and this only works when the argument is an array
+// so the apply  method takes an object as its first argument which becomes the this keyword inside of the function and the arguments in array format.
+// the function in line 237 will not work bcs the arguments in the function originally is not an array
+
+// Bind: it doesnt immediately call the function, but instead it generates a copy of the function, which will enable setting predefined arguments
+//just like Currying, is a technique in which we create a function based on another function but with some preset parameters or a function that returns another function with some of the original functions parameters pre-filled.
+let jerryFriendly = jerry.presentation.bind(jerry, 'casual');
+jerryFriendly('morning');
+jerryFriendly('afternoon');
+
+let emillyFriendly = jerry.presentation.bind(emilly, 'formal');
+emillyFriendly('morning');
+emillyFriendly('afternoon');
+
