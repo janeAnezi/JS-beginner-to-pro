@@ -1,5 +1,5 @@
-let answer = prompt(`Please select the answer (just type the number), or type exit to quit.
-Prevent this page from creating additional dialogs`)
+// let answer = prompt(`Please select the answer (just type the number), or type exit to quit.
+// Prevent this page from creating additional dialogs`)
 
 // function constructor called Question to describe a question.
 // including: question itself
@@ -27,8 +27,17 @@ let question3 = new Question (
     ["Leonardo da Vinci", "Michaelangelo", "Donatello",  "Vincent van Gogh"], 
     0
 );
+let questionArr =  [question1, question2, question3]; // array holding all questions
+  Question.prototype.randomQuestion = function() {
+    console.log(questionArr[Math.floor(Math.random() * questionArr.length)]);
+  }
 
+question1.randomQuestion();
+// question2.randomQuestion();
+// question3.randomQuestion();
 
+let answer = prompt(`Please select the answer (just type the number), or type exit to quit.
+ Prevent this page from creating additional dialogs`);   
 
 
 
