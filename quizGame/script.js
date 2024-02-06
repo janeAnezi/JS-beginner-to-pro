@@ -1,17 +1,29 @@
-// let answer = prompt(`Please select the answer (just type the number), or type exit to quit.
-// Prevent this page from creating additional dialogs`)
 
 // function constructor called Question to describe a question.
 // including: question itself
 // the answers
 //  correctAnswer
 
-let Question = function(questionText,  possibleAnswers, correctAnswer) {
+let Question = function (questionText,  possibleAnswers, correctAnswer) {
     this.questionText = questionText;
     this.possibleAnswers = possibleAnswers;
     this.correctAnswer = correctAnswer
 };
 
+Question.prototype.displayQuestion = function () { 
+    console.log(this.questionText);
+
+    for(let i=1; i< this.possibleAnswers.length; i++){
+        console.log(`${i}:  ${this.possibleAnswers[i]}`);
+    }
+};
+Question.prototype.checkAnswer = function(ans) {
+    if(ans === this.correctAnswer) {
+        console.log('The answer is correct!');
+    }else {
+        console.log('Wrong answer!, Try Again');
+    }
+}
 let question1 = new Question (
     "What is the capital of France?", 
     ["London","Paris","Berlin","Rome"], 
@@ -28,34 +40,13 @@ let question3 = new Question (
     0
 );
 let questionArr =  [question1, question2, question3]; // array holding all questions
-  Question.prototype.randomQuestion = function() {
-    console.log(questionArr[Math.floor(Math.random() * questionArr.length)]);
-  }
+ 
+let numRandom = Math.floor(Math.random() * questionArr.length);
+ questionArr[numRandom].displayQuestion();
 
-question1.randomQuestion();
-// question2.randomQuestion();
-// question3.randomQuestion();
+ let answer = parseInt(prompt("Please select the correct answer"));
 
-let answer = prompt(`Please select the answer (just type the number), or type exit to quit.
- Prevent this page from creating additional dialogs`);   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+questionArr[numRandom].checkAnswer(answer);
 
 
 
