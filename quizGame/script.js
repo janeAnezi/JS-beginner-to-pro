@@ -66,11 +66,14 @@
             console.log(`${i}:  ${this.possibleAnswers[i]}`);
         }
     };
-    Question.prototype.checkAnswer = function(ans) {
+    Question.prototype.checkAnswer = function(ans, callback) {
+        var sc;
         if(ans === this.correctAnswer) {
             console.log('The answer is correct!');
+            sc = callback(true)
         }else {
             console.log('Wrong answer!, Try Again');
+            sc = callback(false)
         }
     }
     let question1 = new Question (
@@ -85,11 +88,22 @@
     );
     let question3 = new Question (
         "Who painted the Mona Lisa?", 
-        ["Leonardo da Vinci", "Michaelangelo", "Donatello",  "Vincent van Gogh"], 
-        1
+        ["Michaelangelo", "Donatello",  "Vincent van Gogh", "Leonardo-da-Vinci"], 
+        3
     );
     let questionArr =  [question1, question2, question3]; // array holding all questions
-    
+    function score() {
+        sc = 0;
+        return function(correct) {
+            if(correct) {
+                sc++;
+            }
+            return score;
+        }
+    }
+    var keepScore = score();
+
+
         function nextQuestion() {
             let numRandom = Math.floor(Math.random() * questionArr.length);
             questionArr[numRandom].displayQuestion();
@@ -97,7 +111,7 @@
             let answer = prompt("Please select the correct answer");
 
             if(answer !== 'exit') {
-               questionArr[numRandom].checkAnswer(parseInt(answer));
+               questionArr[numRandom].checkAnswer(parseInt(answer), keepScore);
            
                 nextQuestion();
             }
