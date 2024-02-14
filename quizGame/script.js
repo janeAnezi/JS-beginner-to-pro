@@ -34,6 +34,7 @@
 // * check if the answer is correct and print to the console whether the answer is correct or not (hint: write another method)
 // * Make sure that all code  is private and doesn't interfere with the other programmers code.
 // * Display the next random question so the the game never ends and also include the option to quit game
+// * Keep the scores of the users
 
 
 (   function() {
@@ -42,6 +43,7 @@
         this.answers = answers;
         this.correctAnswer = correctAnswer
         }
+
         // a method for the question object
         Question.prototype.showQuestion = function() {
             console.log(this.question);
@@ -49,14 +51,39 @@
                 console.log(i + ':' + this.answers[i]);
             }
         }
+
         // a method to check answer 
-        Question.prototype.chechAnswer = function(ans) {
+        Question.prototype.chechAnswer = function(ans, callback) {
+            var sc;
             if(ans === this.correctAnswer) {
                 console.log('Correct Answer!');
+                sc = callback(true);
             } else {
                 console.log('Incorrect!, Try again');
+                sc = callback(false);
+            }
+
+            this.displayScore(sc);
+        }
+
+        // a method to display the score in the conwole
+        Question.prototype.displayScore = function(score) {
+            console.log(`Your current score is: ${score}`);
+            console.log(`----------------------`);
+        }
+
+        // to update the scores of the user
+        function updateScore() {
+            let score = 0;
+            return function(correct) {
+                if(correct) {
+                    score++;
+                }
+                return score;  
             }
         }
+        let keepScore = updateScore();
+
         // to create a couple of questions
         let question1 = new Question (' Which keyword is used to define a function in JavaScript?', ['func', 'define', 'function'], 2);
         let question2 = new Question (' What is the output of typeof [] in JavaScript', ['object','array', 'array-like'], 0);
@@ -65,7 +92,7 @@
         // to store them inside an array
         let questions = [question1, question2, question3, question4];
 
-        function nextQuestion() {
+        function nextQuestion() {                    // to display the next random question
             let randomQue = Math.floor(Math.random() * questions.length);
 
             // select one random question and log it in the console
@@ -73,12 +100,10 @@
 
             let answer = prompt('Please select the correct answer (just type the number) or type exit to quit');
             if(answer !== 'exit') {
-                questions[randomQue].chechAnswer(parseInt(answer));
+                questions[randomQue].chechAnswer(parseInt(answer), keepScore);
 
-                nextQuestion(); // this will repeatedly call the function
-            } else {
-
-            }
+                nextQuestion();                    // this will repeatedly call the function
+            } 
 
         }
         nextQuestion();
