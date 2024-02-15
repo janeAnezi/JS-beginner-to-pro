@@ -38,7 +38,7 @@
 
 
 (   function() {
-        function Question(question, answers, correctAnswer) {
+        function Question(question, answers, correctAnswer) { // (private constructor) function constructor called question
         this.question = question;
         this.answers = answers;
         this.correctAnswer = correctAnswer
@@ -98,6 +98,7 @@
             // select one random question and log it in the console
             questions[randomQue].showQuestion();
 
+            // use the prompt function to ask the user for the correct answer
             let answer = prompt('Please select the correct answer (just type the number) or type exit to quit');
             if(answer !== 'exit') {
                 questions[randomQue].chechAnswer(parseInt(answer), keepScore);
