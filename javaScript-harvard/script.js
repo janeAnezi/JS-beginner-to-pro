@@ -58,7 +58,30 @@ document.querySelector('p').innerHTML = localStorage.getItem('counter');
 // })
  
 // for yhe select tag
-document.querySelector('select').onchange = function() {
-    document.querySelector('#color').style.color = this.value;
+// document.querySelector('select').onchange = function() {
+//     document.querySelector('#color').style.color = this.value;
+// }
+
+// API testing
+const url = 'https://wimsup-referrals.p.rapidapi.com/register_account';
+const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Key': 'a12b0eb549mshbdcc9583a191a57p1b3228jsn6e50c62f0a9b',
+		'X-RapidAPI-Host': 'wimsup-referrals.p.rapidapi.com'
+	},
+	body: {
+		email: '',
+		send_verification_email: 'Yes'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
 }
 
