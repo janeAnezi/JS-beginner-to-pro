@@ -52,4 +52,37 @@ function makeFunctionArray() {
 const functionsArr = makeFunctionArray();
 functionsArr[1]()
 
-// Another way of creating closures is  by using a self-invoking function with an 
+// Another way of creating closures is  by using a self-invoking function 
+ let greeting = (function() {
+    let greet = "Hello, there!";
+    function greeting() {
+        console.log(greet);
+    }
+    return greeting;
+ })();
+console.log(greeting());
+
+const counter = (function(){
+    let count = 0
+    return {
+        inc: () => count++,
+        get: () => console.log(count)
+    }
+})()
+counter.get() // 0
+counter.inc() // 1
+counter.get() // 1
+
+// applying an IIFE here would be;
+function makeAnotherFunctionArray() {
+    let arr = []
+    for (let i=0; i<5; i++) {
+        arr.push(function(x) {
+            return function() {console.log(x);}
+            }(i)
+        )
+    }
+    return arr
+}
+const anotherfunctionsArr = makeAnotherFunctionArray();
+functionsArr[0]()
