@@ -1,9 +1,8 @@
 function numbers(arr, fn) {
     const newArr = []
-    for (let i = 0; i < arr.length; i++) {
-        let val = arr[i]
+    arr.forEach(function(val) {
         newArr.push(fn(val))
-    }
+    })
     return newArr
 }
 function addOne(num) {return num + 1}
