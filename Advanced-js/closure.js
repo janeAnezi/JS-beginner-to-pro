@@ -85,4 +85,4 @@ function makeAnotherFunctionArray() {
     return arr
 }
 const anotherfunctionsArr = makeAnotherFunctionArray();
-functionsArr[0]()
+anotherfunctionsArr[2]()
