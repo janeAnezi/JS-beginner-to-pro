@@ -77,9 +77,9 @@ counter.get() // 1
 function makeAnotherFunctionArray() {
     let arr = []
     for (let i=0; i<5; i++) {
-        arr.push(function(x) {
+        arr.push((function(x) {
             return function() {console.log(x);}
-            }(i)
+            }(i))
         )
     }
     return arr
