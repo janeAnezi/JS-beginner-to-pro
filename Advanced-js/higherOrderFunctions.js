@@ -8,3 +8,4 @@ function numbers(arr, fn) {
 function addOne(num) {return num + 1}
 const x = [0,1,2,3,]
 console.log(numbers(x,addOne)); // [1, 2, 3, 4]
+

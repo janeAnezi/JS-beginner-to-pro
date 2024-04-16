@@ -33,3 +33,9 @@ for(let i = 0; i< sara.length; i++) {
 for(let i = weekDays.length-1; i >= 0; i--) {
     console.log(weekDays[i]);
 }
+
+// forEach loop
+const x = [0,1,2,3,]
+x.forEach(num => {
+    console.log(num + 1)
+});
