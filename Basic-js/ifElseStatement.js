@@ -14,3 +14,11 @@ if(isMarried) {
 } else {
     console.log(firstName,' is', civilStatus);
 }
+
+// conditionalls
+let weather = "sunny";
+if(weather == "rainny") {
+    console.log("Bring an umbrella");
+} else {
+    console.log("Wear your sun glasses");
+}

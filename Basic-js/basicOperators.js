@@ -34,12 +34,11 @@ console.log("John was born in ", johnYear, " and Mark, john's friend was born in
  console.log(x);
 
  // Tip Calculation
- var foodAmt = parseInt(prompt("How much was the food"));
- var tipPercent = parseInt(prompt('tip %')) / 100;
+ let foodAmt = parseInt(prompt("How much was the food"));
+ let tipPercent = parseInt(prompt('tip %')) / 100;
  alert(`your tip percent is ${tipPercent}`);
- var tipAmt = foodAmt * tipPercent;
+ let tipAmt = foodAmt * tipPercent;
  alert(`your tip amount is ${tipAmt}`)
- var totalCost = foodAmt + tipAmt;
+ let totalCost = foodAmt + tipAmt;
  console.log(`Your total cost will be ${totalCost}`);
 
- 
