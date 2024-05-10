@@ -17,8 +17,9 @@ if(isMarried) {
 
 // conditionalls
 let weather = "sunny";
+
 if(weather == "rainny") {
-    console.log("Bring an umbrella");
+    console.log("Bring an umbrella ☔");
 } else {
     console.log("Wear your sun glasses");
 }
