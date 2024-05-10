@@ -57,7 +57,7 @@ document.querySelector('p').innerHTML = localStorage.getItem('counter');
 //     }   
 // })
  
-// for yhe select tag
+// for the select tag
 // document.querySelector('select').onchange = function() {
 //     document.querySelector('#color').style.color = this.value;
 // }
