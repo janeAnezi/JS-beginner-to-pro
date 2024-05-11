@@ -101,3 +101,28 @@ nonye.calAge()
 console.log(nonye);
 nonye.family.push('amara');
 console.log(nonye.family);
+
+let person = {
+    hisName:"leonardo",
+    shirt: "white",
+    hisAge: "27"
+}
+console.log(person.hisName); // dot notation
+console.log(person.shirt);
+
+console.log(person['hisAge']); // bracket notation
+
+person.phone = '070-654-345-98';
+console.log(person.phone);
+console.log(person);
+
+let person2 = {
+    hisName: "Quazi",
+    hisShirt: "black",
+    single: false,
+    inLove: true
+}
+console.log(person2['hisName']);
+console.log(person2.hisShirt);
+console.log(person2.inLove);
+console.log(person2.single);

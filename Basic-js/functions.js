@@ -69,3 +69,13 @@ function calcFoodTotal (foodAmt, tip) {
 }
 
 calcFoodTotal(350,10)
+
+let add = (y,z) => y+z;
+let sub = (c,d) => c-d;
+let div = (e,f) => e/f;
+let mul = (g,h) => g*h;
+
+console.log(add(3,5));
+console.log(sub(10,9));
+console.log(div(27,4));
+console.log(mul(8,9));
