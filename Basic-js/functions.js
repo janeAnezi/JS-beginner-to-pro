@@ -50,3 +50,22 @@ function GreetMe(name) {
 }
 
 GreetMe('Anezi');
+
+function Sum(a, b) {
+    let numadd = a + b;
+    return numadd;
+}
+Sum(5,6);
+
+// Es6 version of JS
+let SumNew = (a,b) => a+b; // implicit return. (explicit return is with the curley brackets)
+
+function calcFoodTotal (foodAmt, tip) {
+    let tipPercentage, tipAmt, total;
+    tipPercentage = tip/100;
+    tipAmt = foodAmt * tipPercentage;
+    total = SumNew(foodAmt, tipAmt);
+    return total;
+}
+
+calcFoodTotal(350,10)
