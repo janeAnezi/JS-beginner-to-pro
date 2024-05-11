@@ -43,3 +43,10 @@ console.log(whatDoYouDo('mary', 'cook'));
 // about function statement/decleration and function expression
 //function statement or decleration does not produce immediate result while 
 //function expression produces immediate result because it gets executed immediately
+
+function GreetMe(name) {
+    let greetMsg = `hi ${name}, nice to meet you`;
+    console.log(greetMsg);
+}
+
+GreetMe('Anezi');
