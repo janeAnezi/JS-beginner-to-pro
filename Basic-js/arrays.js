@@ -31,3 +31,15 @@ console.log(jane);
 console.log(jane.indexOf(true));
 var janeMood = jane.indexOf('happy') === -1 ? 'she is a jolly little fellow' : 'she just dey';
 console.log(janeMood);
+
+let groceries = ['Apple', 'Orange', 'Mango', 'Milk'];
+console.log(groceries[3]); 
+groceries.push('chocolate');
+console.log(groceries);
+groceries.push('sweets');
+console.log(groceries.slice(1,3)); // start from 1 inclusive and up to 3(but not inclusive)
+console.log(groceries.slice(0,2)); // start from 0 inclusive and up to 2(but not inclusive)
+console.log(groceries.indexOf('Milk'));
+console.log(groceries.length);
+groceries.push('candy')
+console.log(groceries);
