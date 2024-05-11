@@ -16,10 +16,10 @@ if(isMarried) {
 }
 
 // conditionalls
-let weather = "sunny";
+let weather =prompt('How is the weather today?');
 
 if(weather == "rainny") {
     console.log("Bring an umbrella ☔");
 } else {
-    console.log("Wear your sun glasses");
+    console.log("Wear your sun glasses 😎");
 }
