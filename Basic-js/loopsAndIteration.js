@@ -68,3 +68,22 @@ let people = [
   // Person 1: John is 30 years old
   // Person 2: Alice is 25 years old
   // Person 3: Bob is 35 years old
+
+  // for loops
+  const fruits = ['orange', 'lemon', 'grape', 'mango', 'pear'];
+  for( let i=0; i<fruits.length; i++) {
+    console.log(i, fruits[i]);
+  } // best written ass .....
+  console.log('better way to write for loop of the above is......');
+  for (let fruit of fruits) {
+    console.log(fruit);
+  }
+
+  const numbers = [1,2,3,4, 5, 6];
+  let newNum = [];
+  for (let number of numbers) {
+    //console.log(number);
+    //console.log(number+= 1);
+    newNum.push( number*2); // to obtain a new array of numbers
+  }
+ console.log(newNum);
