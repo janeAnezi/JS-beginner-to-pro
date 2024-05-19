@@ -61,15 +61,21 @@ var obj = {
  Person2.theAge = 26;
  console.log(Person2);
 
-//  es6 template literals, object, arrow function 
+//  es6 template literals, creating an object, arrow function 
 const intro = (name, age) => {
     const person = {
         name: name,
-        age: age
+        age: age,
+        asset: Number(50000),
+        laibility: Number(20000),
+        netWorth: function() { // methods
+            return Number(this.asset - this.laibility);
+        }
     }
 
-    const personIntro = (`Hello, my name is ${person.name} and I am ${person.age} years old.`);
+    const personIntro = (`Hello, my name is ${person.name} and I am ${person.age} years old. My net worth is $${person.netWorth()} CAD `);
     return personIntro;
 }
 
 console.log(intro('Amina', 45));
+// console.log(intro('leonado', 27));
