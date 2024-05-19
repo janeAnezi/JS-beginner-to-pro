@@ -87,3 +87,25 @@ let people = [
     newNum.push( number*2); // to obtain a new array of numbers
   }
  console.log(newNum);
+
+ // writing a function for the above
+const double = (numbers) => {
+    let newNumbers = [];
+    for (let number of numbers) {
+        newNumbers.push(number * 2);
+    }
+    return newNumbers;
+};
+
+console.log(double([1,2,3,4,5]));
+
+// to display the square of the numbers in the array
+const square = (numbers) => {
+    let newSquNum = [];
+    for (let num of numbers) {
+        newSquNum.push(num ** 2);
+    }
+    return newSquNum;
+}
+
+console.log(square([3,6,2,4]));
