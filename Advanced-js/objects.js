@@ -52,3 +52,24 @@ var obj = {
  console.log(age); // 27
  console.log(obj.city); // 'LA'
  // we do not pass an object in a function, rather  we pass a reference to it (object is passed by value)
+
+ const Person2 = {
+    theName: "presh Amobi",
+    theShirt: "blue",
+ }
+ console.log(Person2);
+ Person2.theAge = 26;
+ console.log(Person2);
+
+//  es6 template literals, object, arrow function 
+const intro = (name, age) => {
+    const person = {
+        name: name,
+        age: age
+    }
+
+    const personIntro = (`Hello, my name is ${person.name} and I am ${person.age} years old.`);
+    return personIntro;
+}
+
+console.log(intro('Amina', 45));
