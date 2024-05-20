@@ -100,6 +100,7 @@ const double = (numbers) => {
 console.log(double([1,2,3,4,5]));
 
 // to display the square of the numbers in the array
+// #for of (loop)
 const square = (numbers) => {
     let newSquNum = [];
     for (let num of numbers) {
@@ -109,3 +110,49 @@ const square = (numbers) => {
 }
 
 console.log(square([3,6,2,4]));
+
+// to display nomber of letters....
+// #for in (loop)
+console.log('the number of the letters below....');
+const howManyLetters = () => {
+    let phrase = 'Let go play';
+    for (let letter in phrase) {
+        console.log(Number(letter)+ 1);
+    }
+}
+
+howManyLetters();
+
+// the howManyLetters function is better written as....
+
+let numOfLetters = (letters) => {
+    let totalNum = 0;
+    for(let letter in letters) {
+        totalNum = Number(letter) + 1;
+    }
+    return {totalNum};
+}
+ let phrase = 'call me';
+ console.log(numOfLetters(phrase));
+ console.log(phrase.length); // also writen ass
+
+ let sumArr = () => {
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let sum = 0;
+    for (let num of arr) {
+        sum += num;
+    }
+    return { sum };
+ }
+
+ console.log(sumArr());
+
+ let sumNum = (num) => {
+    let total = 0;
+    for (let val of num) {
+        total += val;
+    }
+    return { total };
+ }
+  let values = [1,2,3,4,5];
+  console.log(sumNum(values));
