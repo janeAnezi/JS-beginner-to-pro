@@ -136,8 +136,10 @@ let numOfLetters = (letters) => {
  console.log(numOfLetters(phrase));
  console.log(phrase.length); // also writen ass
 
+ // summ all the numbers
+let arr = [1,2,3,4,5,6,7,8,9,10];
  let sumArr = () => {
-    let arr = [1,2,3,4,5,6,7,8,9,10];
+   
     let sum = 0;
     for (let num of arr) {
         sum += num;
@@ -156,3 +158,64 @@ let numOfLetters = (letters) => {
  }
   let values = [1,2,3,4,5];
   console.log(sumNum(values));
+
+  // find the max number
+
+  let maxNum = (numbers) => {
+    let max = numbers[0];
+    for(let num of numbers) {
+        if (num > max) {
+            max = num;
+        }
+    }
+    return { max };
+  }
+
+  console.log(maxNum(arr));
+
+  let maxVal = (vals) => {
+    let highVal = vals[0];
+    for (let val of vals) {
+        if (val > highVal) {
+            highVal = val;
+        }
+    }
+    return { highVal };
+  }
+ let vals = [23, 45,78,10, 9, 190, 443,27,15]
+  console.log(maxVal(vals));
+
+  // finding number of occurance (frequency)
+
+const letterFreq = (phrase) => {
+    console.log(phrase);
+    let frequency = {};
+    for (let letter of phrase) {
+        if (letter in frequency) {
+            frequency[letter]++;
+        } else {
+            frequency[letter] = 1;
+        }
+    } 
+    return frequency;
+}
+
+console.log(letterFreq('armmy!!!!'));
+
+// word frequency
+const wordFreq = (sentence) => {
+    let frequency = {};
+    let arrSentence = sentence.split(' '); // saperates the sentence by empty spaces into array of words
+    for (let word of arrSentence) {
+        // console.log(word);
+        if (word in frequency) {
+            frequency[word]++;
+        } else {
+            frequency[word] = 1;
+        }
+    }
+
+    return frequency;
+}
+
+console.log(wordFreq('oh my oh my i get it now'));
