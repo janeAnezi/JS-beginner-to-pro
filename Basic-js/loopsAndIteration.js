@@ -204,18 +204,9 @@ console.log(letterFreq('armmy!!!!'));
 
 // word frequency
 const wordFreq = (sentence) => {
-    let frequency = {};
+   
     let arrSentence = sentence.split(' '); // saperates the sentence by empty spaces into array of words
-    for (let word of arrSentence) {
-        // console.log(word);
-        if (word in frequency) {
-            frequency[word]++;
-        } else {
-            frequency[word] = 1;
-        }
-    }
-
-    return frequency;
+   return letterFreq(arrSentence);
 }
 
 console.log(wordFreq('oh my oh my i get it now'));
