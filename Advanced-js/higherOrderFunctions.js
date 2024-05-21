@@ -29,11 +29,11 @@ let filter = (arrNum, greaterthan) => {
 console.log(filter(number, 3));
 
 const actors = [
-    {name: 'johnny', netWorth: 20000},
+    {name: 'johnny', netWorth: 2000},
     {name: 'amber', netWorth: 1000},
     {name: 'Ahnnie', netWorth: 2000},   
     {name: 'jane', netWorth: 5000},   
-    {name: 'grace', netWorth: 16000}    
+    {name: 'grace', netWorth: 12000}    
 
 ]
 let result = (actors.filter(actor => actor.netWorth > 1000));
@@ -43,3 +43,6 @@ console.log(names);
 
 const reduce = (number.reduce((prev, curr) => prev + curr));
 console.log(reduce);
+
+let totalNetWorth = actors.map(actor => actor.netWorth);
+console.log(totalNetWorth.reduce((prev, curr) => prev + curr, 0));
